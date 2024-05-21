@@ -1,2 +1,2 @@
 dist/index.js: index.js
-	ncc build index.js -o dist
+	./node_modules/.bin/ncc build index.js -o dist
