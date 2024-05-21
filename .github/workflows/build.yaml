@@ -20,8 +20,6 @@ jobs:
       run: |
         # install app deps
         npm install
-        # install build deps
-        npm install -g @vercel/ncc
     - name: build
       run: |
         rm dist/index.js
