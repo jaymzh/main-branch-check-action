@@ -1,15 +1,18 @@
 {
   "name": "main-branch-check",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Check main branch status of a workflow",
   "main": "index.js",
   "dependencies": {
     "@actions/core": "^1.10.1",
     "@actions/github": "^4.x"
   },
+  "devDependencies": {
+    "@vercel/ncc": "^0.38.1"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "phild@openai.com",
-  "license": "ISC"
+  "author": "phil@ipom.com",
+  "license": "MIT"
 }
