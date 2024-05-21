@@ -26,3 +26,13 @@ jobs:
       run: |
         rm dist/index.js
         make
+  main-branch-check:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Main branch check
+      if: always() && github.ref != 'refs/heads/main' 
+      uses: jaymzh/main-branch-check-action@main
+      with:
+        gh_token: ${{ secrets.GITHUB_TOKEN }}
+        main_branch: "main"
+        workflow_ref: ${{ github.workflow_ref }}
