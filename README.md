@@ -7,13 +7,14 @@ see if the workflow has run on master, and if it has, ensure
 it is passing.
 
 To bypass this (e.g. if your PR is the fix), you can add:
-```
+
+```text
 [ci override_main_branch_checks $WORKFLOW]'
 ```
 
 Or you to set all checks to non-fatal, you can do:
 
-```
+```text
 [ci override_main_branch_checks]
 ```
 
