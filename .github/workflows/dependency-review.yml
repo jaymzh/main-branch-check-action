@@ -1,13 +1,11 @@
-name: Lint
+name: 'Dependency Review'
+on: [pull_request]
 
-on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+permissions:
+  contents: read
 
 jobs:
-  markdownlint:
+  dependency-review:
     runs-on: ubuntu-latest
     steps:
       - name: Harden the runner (Audit all outbound calls)
@@ -15,7 +13,7 @@ jobs:
         with:
           egress-policy: audit
 
-      - name: checkout
+      - name: 'Checkout Repository'
         uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4.3.1
-      - name: MarkdownLint mdl Action
-        uses: actionshub/markdownlint@2601ac85428122bc70b8d1ec4d539d1cfe17c0b3 # 1.2.0
+      - name: 'Dependency Review'
+        uses: actions/dependency-review-action@2031cfc080254a8a887f58cffee85186f0e49e48 # v4.9.0
