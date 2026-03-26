@@ -10,10 +10,15 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+    - name: Harden the runner (Audit all outbound calls)
+      uses: step-security/harden-runner@fa2e9d605c4eeb9fcad4c99c224cee0c6c7f3594 # v2.16.0
+      with:
+        egress-policy: audit
+
     - name: checkout
-      uses: actions/checkout@v4
+      uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4.3.1
     - name: setup node
-      uses: actions/setup-node@v4
+      uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
       with:
         node-version: '20'
     - name: install deps
@@ -28,9 +33,14 @@ jobs:
   main-branch-check:
     runs-on: ubuntu-latest
     steps:
+    - name: Harden the runner (Audit all outbound calls)
+      uses: step-security/harden-runner@fa2e9d605c4eeb9fcad4c99c224cee0c6c7f3594 # v2.16.0
+      with:
+        egress-policy: audit
+
     - name: Main branch check
       if: always() && github.ref != 'refs/heads/main' 
-      uses: jaymzh/main-branch-check-action@main
+      uses: jaymzh/main-branch-check-action@65e58b48c3c5f4e7bbc8cfa41c463ca9d7fd19cb # main
       with:
         gh_token: ${{ secrets.GITHUB_TOKEN }}
         main_branch: "main"
