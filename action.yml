@@ -17,7 +17,7 @@ inputs:
     default: true
 runs:
   using: "node20"
-  main: "dist/index.js"
+  main: "index.js"
 branding:
   icon: "git-branch"
   color: "gray-dark"
