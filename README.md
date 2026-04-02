@@ -1,6 +1,8 @@
 # main-branch-check action
 
 [![Build](https://github.com/jaymzh/main-branch-check-action/actions/workflows/build.yaml/badge.svg?branch=main)](https://github.com/jaymzh/main-branch-check-action/actions/workflows/build.yaml)
+[![CodeQL](https://github.com/jaymzh/main-branch-check-action/actions/workflows/codeql.yml/badge.svg)](https://github.com/jaymzh/main-branch-check-action/actions/workflows/codeql.yml)
+[![Lint](https://github.com/jaymzh/main-branch-check-action/actions/workflows/lint.yaml/badge.svg)](https://github.com/jaymzh/main-branch-check-action/actions/workflows/lint.yaml)
 
 This check will determine the workflow it was called from, then
 see if the workflow has run on master, and if it has, ensure
