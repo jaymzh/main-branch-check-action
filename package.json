@@ -1,6 +1,6 @@
 {
   "name": "main-branch-check",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Check main branch status of a workflow",
   "main": "dist/index.js",
   "type": "module",
