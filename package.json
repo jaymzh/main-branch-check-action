@@ -2,7 +2,7 @@
   "name": "main-branch-check",
   "version": "1.0.4",
   "description": "Check main branch status of a workflow",
-  "main": "dist/index.js",
+  "main": "index.js",
   "dependencies": {
     "@actions/core": "^3.0.0",
     "@actions/github": "^9.x"
