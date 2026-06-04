@@ -40,7 +40,7 @@ jobs:
 
     - name: Main branch check
       if: always() && github.ref != 'refs/heads/main' 
-      uses: jaymzh/main-branch-check-action@65e58b48c3c5f4e7bbc8cfa41c463ca9d7fd19cb # main
+      uses: jaymzh/main-branch-check-action@ffa3496c476823008cebf38ce173c9af212ae09e # main
       with:
         gh_token: ${{ secrets.GITHUB_TOKEN }}
         main_branch: "main"
