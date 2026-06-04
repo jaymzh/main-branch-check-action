@@ -40,7 +40,11 @@ jobs:
 
     - name: Main branch check
       if: always() && github.ref != 'refs/heads/main' 
-      uses: jaymzh/main-branch-check-action@65e58b48c3c5f4e7bbc8cfa41c463ca9d7fd19cb # main
+      # in this one case we don't use hashes, because otherwise we'd get
+      # in a never ending cycle of bumping everytime we merge. :) Since it's
+      # our own repo there's no security issues here, we're already running
+      # our own code in tests.
+      uses: jaymzh/main-branch-check-action@main
       with:
         gh_token: ${{ secrets.GITHUB_TOKEN }}
         main_branch: "main"
